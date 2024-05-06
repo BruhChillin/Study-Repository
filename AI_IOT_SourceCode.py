@@ -6,7 +6,7 @@ from Adafruit_IO import MQTTClient
 
 
 AIO_USERNAME = "KingCongJr"
-AIO_KEY = "aio_HYwf51la0kmS4WEoElK5CaFWFt0h"
+AIO_KEY = "aio_dYQg78gdxQgRoOHd8tzXyu2XmWnb"
 
 client = MQTTClient(AIO_USERNAME , AIO_KEY)
 client.connect()
@@ -48,7 +48,7 @@ while True:
     class_name = class_names[index]
     confidence_score = prediction[0][index]
 
-    client.publish("score", str(confidence_score) )
+    client.publish("score", str(np.round(confidence_score * 100)) )
     # Print prediction and confidence score
     print("Class:", class_name[2:], end="")
     print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
