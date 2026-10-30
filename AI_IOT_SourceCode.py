@@ -5,8 +5,8 @@ import time
 from Adafruit_IO import MQTTClient
 
 
-AIO_USERNAME = "KingCongJr"
-AIO_KEY = "aio_dYQg78gdxQgRoOHd8tzXyu2XmWnb"
+AIO_USERNAME = "YOUR_ADAFRUIT_USERNAME"
+AIO_KEY = "YOUR_ADAFRUIT_KEY"
 
 client = MQTTClient(AIO_USERNAME , AIO_KEY)
 client.connect()
